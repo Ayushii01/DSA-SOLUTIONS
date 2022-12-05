@@ -1,0 +1,11 @@
+class Solution:
+    def singleNumber(self, nums: List[int]) -> List[int]:
+        if len(nums) == 0:
+            return []
+        li={}
+        for i in nums:
+	        if i not in li:
+                    li[i] = True
+	        else:
+		        li.pop(i)
+        return li
